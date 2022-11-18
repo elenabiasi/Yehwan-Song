@@ -1,0 +1,40 @@
+.popup--container {
+  position: absolute;
+  z-index: 1000;
+}
+
+.popup {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-shadow: 3px 3px 0 0 black;
+  display: flex;
+}
+
+.popup img {
+  display: inline-block;  
+}
+
+.popup .button {
+  position: absolute;
+  top: 157px;
+  width: 103px;
+  height: 32px;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+}
+
+.button {
+  all: unset;
+  font-family: inherit;
+  background-image: "bouton-enfonce.png";
+}
+
+canvas {
+  display: block;
+}
+
+
+body {
+  user-select: none;
+}

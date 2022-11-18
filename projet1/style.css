@@ -1,0 +1,134 @@
+@font-face {
+  font-family: mondwest;
+  src: url(Mondwest-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: mondwest;
+  font-weight: 100;
+  src: url(Mondwest-Regular.ttf);
+}
+
+.shake-text {
+ /* margin-top: 40px; */
+  color: black;
+  position: absolute;
+  width: 100%;
+}
+
+.image {
+  position: relative;
+}
+
+img {
+  float: right;
+  margin-top: 10px;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+}
+
+div {
+  font-size: 3.3em;
+  font-family: mondwest;
+  line-height: 0.77em;
+}
+
+.hot {
+  margin-top: 10px;
+  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.hot.hidden + .hot,
+.hot:first-child {
+  font-weight: bold;
+}
+
+/* .shake-text {
+  display: flex;
+  flex-direction: column-reverse;
+
+} */
+
+.rub {
+  text-align: center;
+  margin-top: 90%;
+  animation-duration: 0.5s;
+  font-size: 25pt;
+  margin-right: 50%;
+
+}
+
+.hot1 {
+  animation-duration: 0.5s;
+}
+
+.hot2 {
+  animation-duration: 0.7s;
+}
+
+.hot3 {
+  animation-duration: 0.9s;
+}
+
+.hot4 {
+  animation-duration: 1s;
+}
+
+.hot5 {
+  animation-duration: 2s;
+}
+
+.shake-content {
+  position: absolute;
+  pointer-events: none;
+  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#carre{
+  position:absolute;
+  width:900px;
+  height:900px;
+  background:white;
+  filter: blur(4px);
+  }
