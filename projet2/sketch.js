@@ -16,14 +16,14 @@ function preload() {
 
 function setup() {
   const p5Canvas = createCanvas(windowWidth, windowHeight);
-  pixelDensity(0.60)
+  pixelDensity(0.6);
   GradientMaps.applyGradientMap(
     p5Canvas.elt,
     "black, white, blue, yellow, red, white"
   );
 
-  const svg = document.querySelector('#filter-0')
-  svg.setAttribute('filterRes', 1)
+  const svg = document.querySelector("#filter-0");
+  svg.setAttribute("filterRes", 1);
 
   textSize(36);
   rectMode(CENTER);
@@ -52,9 +52,13 @@ window.addEventListener("click", () => {});
 /* prevents the mobile browser from processing some default
  * touch events, like swiping left for "back" or scrolling the page.
  */
-document.ontouchmove = function (event) {
-  event.preventDefault();
-};
+document.addEventListener(
+  "touchmove",
+  function (event) {
+    event.preventDefault();
+  },
+  { passive: false }
+);
 
 function buttonClosed() {
   const margin = 100;

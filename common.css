@@ -1,12 +1,12 @@
 @font-face {
   font-family: mondwest;
-  src: url(/fonts/Mondwest-Bold.ttf);
+  src: url(./fonts/Mondwest-Bold.ttf);
   font-weight: bold;
 }
 @font-face {
   font-family: mondwest;
   font-weight: 100;
-  src: url(/fonts/Mondwest-Regular.ttf);
+  src: url(./fonts/Mondwest-Regular.ttf);
 }
 
 html,
